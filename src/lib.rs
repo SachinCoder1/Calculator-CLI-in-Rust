@@ -43,4 +43,9 @@ mod tests {
     fn test_divide() {
         assert_eq!(calculate(Operation::Divide, 4.0, 2.0), Some(2.0));
     }
+
+    #[test]
+    fn test_division_by_zero() {
+        assert_eq!(calculate(Operation::Divide, 10.0, 0.0), None);
+    }
 }
