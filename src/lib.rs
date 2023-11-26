@@ -33,6 +33,10 @@ mod tests {
     fn test_addition() {
         assert_eq!(calculate(Operation::Add, 5.0, 3.0), Some(8.0));
     }
+    
+    #[test]
+    fn test_subtraction() {
+        assert_eq!(calculate(Operation::Subtract, 20.0, 10.0), Some(10.0));
+    }
 
-    // Similarly, add tests for subtraction, multiplication, and division
 }
