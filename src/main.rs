@@ -15,8 +15,8 @@ fn main() {
 
     let operation = match OPERATIONS[selection] {
         "Add" => Operation::Add,
-        "Subtract" => Operation::Substract,
-        "Multiply" => Operation::Multiplication,
+        "Subtract" => Operation::Subtract,
+        "Multiply" => Operation::Multiply,
         "Divide" => Operation::Divide,
         _ => {
             panic!("Not Selected Any Value! Please Try Again");

@@ -1,7 +1,7 @@
 pub enum Operation {
     Add,
-    Substract,
-    Multiplication,
+    Subtract,
+    Multiply,
     Divide
 }
 
@@ -10,8 +10,15 @@ pub enum Operation {
 pub fn calculate (operation: Operation, num1: f64, num2: f64) -> Option<f64> {
     match operation {
         Operation::Add => Some(num1 + num2),
-        Operation::Substract => Some(num1 - num2),
-        Operation::Multiplication => Some(num1 * num2),
-        Operation::Divide => Some(num1/num2),
+        Operation::Subtract => Some(num1 - num2),
+        Operation::Multiply => Some(num1 * num2),
+        Operation::Divide => {
+            if num2 == 0.0 {
+                None
+            } else {
+                Some(num1 / num2)
+            }
+        }
+        
     }
 }
