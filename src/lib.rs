@@ -22,3 +22,17 @@ pub fn calculate (operation: Operation, num1: f64, num2: f64) -> Option<f64> {
         
     }
 }
+
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_addition() {
+        assert_eq!(calculate(Operation::Add, 5.0, 3.0), Some(8.0));
+    }
+
+    // Similarly, add tests for subtraction, multiplication, and division
+}
