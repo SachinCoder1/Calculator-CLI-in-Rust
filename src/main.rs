@@ -23,14 +23,14 @@ fn main() {
         }
     };
 
-    let first_number = read_number("Enter First Number:");
-    let second_number = read_number("Enter Second Number");
+    let first_number = read_number("Enter the first number::");
+    let second_number = read_number("Enter the second number:");
 
     let calculated_value = calculate(operation, first_number, second_number);
 
     match calculated_value {
         Some(num) => println!("= {}", num),
-        None => println!("Failed to get result!"),
+        None => println!("Cannot divide by zero!"),
     }
 }
 
@@ -39,7 +39,7 @@ fn read_number(prompt: &str) -> f64 {
     let mut input = String::new();
     io::stdin()
         .read_line(&mut input)
-        .expect("Failed to read input! Please try agaub");
+        .expect("Failed to read input! Please try again");
     let parsed_number: f64 = input
         .trim()
         .parse()
